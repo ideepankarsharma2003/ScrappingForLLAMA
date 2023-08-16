@@ -1,6 +1,7 @@
 
 import http.client
 import json
+from spyfu_creds import spyfu_creds
 
 
 # conn = http.client.HTTPSConnection("www.spyfu.com")
@@ -19,7 +20,7 @@ import json
 class OrganicKeywords:
     def __init__(self) -> None:
         self.conn= http.client.HTTPSConnection("www.spyfu.com")
-        self.headers = { 'Authorization': "b57ebffc-6753-4d8c-b832-6bfcc8067d7b:NNXIHRGE" }
+        self.headers = spyfu_creds
 
     def extract_organic_keywords(self, url):
         self.conn.request(
