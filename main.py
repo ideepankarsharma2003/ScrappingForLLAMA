@@ -13,7 +13,7 @@ with open("urls.txt", "r") as f1 , open("keywords.txt", "w") as keywords, open("
         # print(organic_keywords)
 
         text= clean(url)
-        summary= summarizer.summarize(text, words=400)
+        summary= summarizer.summarize(text, words=100)
         summary= summary.replace('\n', ' ')
         
         keywords.write(str(organic_keywords)+'\n')
